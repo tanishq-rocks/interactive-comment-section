@@ -124,7 +124,21 @@ export default {
     },
     createdAt() {
       dayjs.extend(relativeTime);
-      return dayjs(this.comment.createdAt).fromNow();
+      let tempStr = dayjs(this.comment.createdAt).fromNow();
+      // console.log(tempStr)
+      if(/^[a]/.test(tempStr)){
+        tempStr = 1 + tempStr.slice(1);
+      }
+      if(tempStr.includes('days ago')){ 
+        if(Number(tempStr.split(' ')[0]) >= 21){
+            tempStr = '3 weeks ago';
+        }else if(Number(tempStr.split(' ')[0]) >= 14){
+            tempStr = '2 weeks ago';
+        }else if(Number(tempStr.split(' ')[0]) >= 7){
+            tempStr = '1 week ago';
+        }
+      }
+      return tempStr;
     },
   },
   watch: {

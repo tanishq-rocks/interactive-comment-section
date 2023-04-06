@@ -99,7 +99,8 @@
 
 .modal__cancel-btn {
   @extend %btn;
-  margin-right: 0.75em;
+  margin-right: 5%;
+  width: 45%;
   padding: 0.75em 1em;
   font-size: 0.938rem;
   text-transform: uppercase;
@@ -115,6 +116,9 @@
 
 .modal__confirm-btn {
   @extend .modal__cancel-btn;
+  margin-left: 5%;
+  margin-right: 0;
+  width: 45%;
   background-color: $soft-red;
 }
 
