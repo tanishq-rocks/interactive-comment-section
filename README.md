@@ -29,7 +29,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [Add live site URL here](https://tanishq-rocks.github.io/interactive-comment-section/)
+- Live Site URL: [Click me](https://tanishq-rocks.github.io/interactive-comment-section/)
 
 ## My process
 
