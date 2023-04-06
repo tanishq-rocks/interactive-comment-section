@@ -1,0 +1,69 @@
+@use '../abstracts/' as *;
+@use '../base/typography' as *;
+@use '../components/media' as *;
+
+%input {
+  all: unset;
+  font-family: $font-stack;
+}
+
+.input__vote {
+  @extend %input;
+  width: 40px;
+  font-weight: weight(medium);
+  text-align: center;
+  color: $moderate-blue;
+  pointer-events: none;
+}
+
+.comment-form__input {
+  grid-area: input;
+  @extend %input;
+  padding: 1rem;
+  word-wrap: break-word;
+  border: 1.5px solid $light-gray;
+  border-radius: 10px;
+
+  &:focus {
+    border-color: $moderate-blue;
+  }
+}
+
+.comment-edit__input {
+  width: 100%;
+  margin-bottom: 1rem;
+  padding: 1rem 0.5rem;
+  font-family: $font-stack;
+  font-size: 0.875rem;
+  font-weight: weight(regular);
+  word-wrap: break-word;
+  outline: none;
+  resize: none;
+  background: transparent;
+  color: $grayish-blue;
+  border: 1.5px solid $moderate-blue;
+  border-radius: 10px;
+}
+
+@include sm {
+  .input__vote {
+    width: 60px;
+  }
+}
+
+@include md {
+  .comment-edit__input {
+    font-size: 1rem;
+  }
+}
+
+@include lg {
+  .input__vote {
+    width: 40px;
+    height: 40px;
+  }
+
+  .comment-form__input {
+    width: 100%;
+  }
+}
